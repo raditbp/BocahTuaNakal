@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	
+	<element name="Arcanotechnician" type="Archetype" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_ARCANOTECHNICIAN">
+		<supports>Artificer Specialist</supports>
+		<description>
+			<p>As a member of the School of Arcanotech, you aim to bring combining magic, alchemy, and mechanical science to another whole new level. While this innevitably slows down your advancement as a spellcaster, sacrifices are necessary in the name of progress.</p>
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_TOOL_PROFICIENCY" />
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1A" />
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1B" />
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1C" />
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT2" />
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT3" />
+			<div element="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEATFINAL" />
+			</description>
+		<sheet>
+			<description>As a member of the School of Arcanotech, you aim to bring combining magic, alchemy, and mechanical science to another whole new level.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_TOOL_PROFICIENCY" level="3" />
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1B" level="3" />
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1B" level="3" />
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1C" level="3" />
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT2" level="5" />
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT3" level="9" />
+			<grant type="Archetype Feature" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEATFINAL" level="15" />
+		</rules>
+	</element>
+	<element name="Tool Proficiency" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_TOOL_PROFICIENCY">
+		<description>
+			<p>When you adopt this specialization at 3rd level, you gain proficiency with both alchemist's supplies and smith's tools. If you already have any of these proficiencies, you gain proficiency with one or two other types of artisan’s tools of your choice.</p>
+		</description>
+		<sheet>
+			<description>You gain proficiency with both alchemist's supplies and smith's tools. If you already have any of these proficiencies, you gain proficiency with one or two other types of artisan’s tools of your choice.</description>
+		</sheet>
+		<rules>
+			<select type="Proficiency" name="Tool Proficiency, Arcanotechnician" supports="Tool" default="ID_PROFICIENCY_TOOL_PROFICIENCY_ALCHEMISTS_SUPPLIES" />
+			<select type="Proficiency" name="Tool Proficiency, Arcanotechnician" supports="Tool" default="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+		</rules>
+	</element>
+    <element name="Arcanotechnician Spells" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1A">
+		<description>
+			<p>Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Arcanotechnician Spells table. These spells count as artificer spells for you, but they don’t count against the number of artificer spells you prepare.</p>
+			<h5 class="caption">ARCANOTECHNICIAN SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Artificer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>identify</em></td></tr>
+				<tr><td>5th</td><td><em>locate object</em></td></tr>
+				<tr><td>9th</td><td><em>glyph of warding</em></td></tr>
+				<tr><td>13th</td><td><em>fabricate</em></td></tr>
+				<tr><td>17th</td><td><em>animate objects</em></td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description>You always have certain spells prepared after you reach particular levels in this class, as shown in the Arcanotechnician Spells table. These spells count as artificer spells for you, but they don’t count against the number of artificer spells you prepare.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_IDENTIFY" spellcasting="Artificer" level="3" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_LOCATE_OBJECT" spellcasting="Artificer" level="5" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GLYPH_OF_WARDING" spellcasting="Artificer" level="9" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FABRICATE" spellcasting="Artificer" level="13" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ANIMATE_OBJECTS" spellcasting="Artificer" level="17" prepared="true" />
+		</rules>
+	</element>
+	<element name="Arcanotech Gadgets" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1B">
+		<description>
+			<p>You have learned a different way of infusing magic into mundane items. By attaching clockwork gadget into an item then powering it up with your Arcanotech Battery, you can bring a new kind of mechanical wonder to life.</p>
+            <p class="indent">Starting from 3rd level, infusing an item is now a costly and time consuming process. Infusing an item now takes 10 minutes of tinkering with the item using your smith's tools. In addition, each of your infusion now costs a certain amount of gp in arcanotech materials and spellcasting focus based on their prerequisite level, as shown in the Arcanotechnician Infusion Costs table</p>
+            <h5 class="caption">ARCANOTECHNICIAN INFUSION COSTS</h5>
+			<table>
+				<thead>
+					<tr><td>Infusion Prerequisite Level</td><td>Arcanotech Material Cost</td><td>Spellcasting Focus</td></tr>
+				</thead>
+				<tr><td>none</td><td>10 gp in arcanotech materials</td><td>a crystal worth 10 gp</td></tr>
+				<tr><td>6th</td><td>20 gp worth in arcanotech materials</td><td>a gem worth 50 gp</td></tr>
+				<tr><td>10th</td><td>150 gp worth in masterworked arcanotech materials</td><td>a gem worth 100 gp</td></tr>
+				<tr><td>14th</td><td>500 gp worth in enhanced arcanotech materials</td><td>a gem worth 500 gp</td></tr>
+			</table>
+            <p class="indent">However, when you infuse an item with an infusion that's already on another item, it no longer makes the previous item lose its infusion. The infusion however will remain inert until you spend 1 minute tinkering with the object using your smith's tool to attach an Arcanotech Battery to it and power it up.</p>
+            <p class="indent">Deactivating an infusion also requires you to take 1 minute of working on the item with your smith's tool to detach the Arcanotech Battery from it. The process doesn't remove the arcanotech gadget, and thus the infusion, from the item unless you specify so.</p>
+            <p class="indent">If you want to infuse the item with another infusion, you must first remove the gadget from it. The action also takes you 10 minutes of tinkering with the object, after which you detach the gadget on it.</p>
+            <p class="indent">You can reattach the gadget to another similar object within 10 minutes before your infusion dissipates entirely from it. You can also salvage materials from the detached gadget, recovering the spellcasting focus and one-half the gadget's material cost.</p>
+            <p class="indent">Attaching or detaching gadgets is an activity best done in the safety of an arcanotech workshop. If a situation forces you to do so outside the workshop, roll a check as if you're making a magic item of the infusion's level. Failure means the gadget is broken, though you would still be able to at least salvage the spellcasting material. A mundane blacksmith's workshop grants you a +2 circumstance bonus to the check, while a non-arcanotech magic workshop grants you a +4 circumstance bonus.</p>
+		</description>
+		<sheet>
+			<description>You have learned a different way of infusing magic into mundane items. You can only imbue an item with one of your infusions by taking 10 minutes tinkering with it using your smith's tools. However, when you infuse an item with an infusion that's already on another item, it does not make the previous item lose its infusion. The infusion however will remain inert until you spend 1 minute tinkering with the object using your smith's tool to attach an Arcanotech Battery to it and power it up.</description>
+		</sheet>
+	</element>
+	<element name="Arcanotech Battery" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT1C">
+		<description>
+			<p>These small metal tubes are what power your infusions. When you reach 3rd level, you have learned how to permanently house your energy in these little alchemical wonders.</p>
+            <p class="indent">You gain a number of Arcanotech Battery equal to the number of infusion you have at your level. At any time you can gain a new infusion, you increase the number of your battery by an equal amount.</p>
+            <p class="indent">Your infusions are very reliant on these batteries. The absence of the battery will render your infusion inactive. However, the batteries also allow you to power up any number of identical gadgets, thus making uniformity possible.</p>
+            <p class="indent">Your Arcanotech Battery is connected to your magic. If at any point you lose one or multiple batteries and are unable to retrieve them, you can cut off your connection to them, thus deactivating them, and create new ones in their place.</p>
+            <p class="indent">Creating a new battery takes 1 hour of working with a set of alchemist's supplies and 100gp in materials each, 50gp of that is in the precious gem or crystal that you will have to use as the basis of the new battery, while the rest is in alchemical substances that will serve as the power catalyst. You can create any number of batteries simultaneously as long as you have enough materials and sets of alchemist's supplies for each.</p>
+            <p class="indent">Creating a new Arcanotech Battery is best done while you are in an arcanotech workshop. If a situation forces you to do so outside the workshop, roll a check for each battery you're making as if you're making an uncommon 3rd level magic item. Failure means the new battery is broken and you lose all the materials used in the process. A standard alchemist's workshop grants you a +2 circumstance bonus to the check, while a non-arcanotech magic workshop grants you a +4 circumstance bonus.</p>
+            <p class="indent">You can keep inactive spare batteries with you to circumvent this situation. Activating the battery requires only touching it for 1 minute and expending a spell slot of 1st level or higher as you imbue it with your magic.</p>
+            <p class="indent">These batteries, however, can stay in its inactive state only for a month before they have risk of leaking out and breaking down. At the end of a month, roll a class proficiency bonus check with DC 13 + 1 for each inactive battery you have. Success means you manage to keep them intact, fail means you lose 1D6 number of batteries.</p>
+		</description>
+		<sheet>
+			<description>You have a number of Arcanotech Battery equal to the number of infusion you have at your level. You can use these batteries to power up your deactivated infused items.</description>
+		</sheet>
+	</element>
+    <element name="Arcanotech Servant" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT2">
+		<description>
+			<p>At 5th level, your tinkering borne you a tiny but loyal assistant, the arcanotech servant. It is friendly to you and your companions, and it obeys your commands. See this creature’s game statistics in the arcanotech servant stat block. You determine the creature’s appearance and whether it has two legs, four, or more; your choice has no effect on its game statistics.</p>
+			<p class="indent">In combat, the arcanotech servant shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take one of the actions in its stat block or the Dash, Disengage, Help, Hide, or Search action.</p>
+			<p class="indent">If the mending spell is cast on it, it regains 2d6 hit points. If it has died within the last hour, you can use your smith’s tools as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The arcanotech servant returns to life after 1 minute with all its hit points restored.</p>
+			<p class="indent">At the end of a long rest, you can create a new arcanotech servant if you have your smith’s tools with you. If you already have a arcanotech servant from this feature, the first one immediately perishes.</p>
+		</description>
+		<sheet>
+			<description>In combat, the arcanotech servant shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take one of the actions in its stat block or the Dash, Disengage, Help, Hide, or Search action.
+			If the mending spell is cast on it, it regains 2d6 hit points. If it has died within the last hour, you can use your smith’s tools as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The arcanotech servant returns to life after 1 minute with all its hit points restored.
+			At the end of a long rest, you can create a new arcanotech servant if you have your smith’s tools with you.</description>
+		</sheet>
+		<rules>
+            <select type="Companion" name="Arcanotech Servant" supports="Arcanotech Servant" default="ID_BOTUNAK_HOMEBREW_COMPANION_ARTIFICER_ARCANOTECH_SERVANT" />
+		</rules>
+	</element><element name="Arcanotech Savant" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEAT3">
+		<description>
+			<p>By 9th level, you are so used to making, fixing, and basically taking care of your gadgets and batteries outside the safety of your workshop that you no longer depend on it to work your magic.</p>
+            <p class="indent">When working with your artisan’s tools for the purpose of activating or deactivating your infusions, making, attaching, or detaching gadgets, or making new batteries, you take half the required time and you gain a +2 proficiency bonus to the check you make for working outside an arcanotech workshop.</p>
+            <p class="indent">Later at 10th level, the infusion that you have learned and receives an increase in the bonus they provide must first be upgraded before they can grant their new bonus. To do so, you must replace the gadget's spellcasting focus used for the gadget with a gem worth 50 gp.</p>
+		</description>
+		<sheet>
+			<description>When working with your artisan’s tools for the purpose of activating or deactivating your infusions, making, attaching, or detaching gadgets, or making new batteries, you take half the required time and you gain a +2 proficiency bonus to the check you make for working outside an arcanotech workshop.</description>
+		</sheet>
+	</element>
+	<element name="Arcanotech Master" type="Archetype Feature" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_ARCHETYPE_FEATURE_ARCANOTECHNICIAN_FEATFINAL">
+		<description>
+			<p>At 15th level, you have found ways to futher enhance the performance of your basic archanotech gadgets and arcanotech servant:</p>
+			<ul>
+				<li>The bonus of your Enhanced Arcane Focus, Enhanced Defense, and Enhanced Weapon increases to +3.</li>
+                <li>The bonus of your Repeating Shot and Returning Weapon increases to +2.</li>
+				<li>Your arcanotech servant gains a +2 bonus to Armor Class.</li>
+				<li>Your arcanotech can now also serve as a magic node. When you cast a spell, you can use the space occupied by the servant as its origin instead. You still must be able to see the target of the spell to do so.</li>
+			</ul>
+            <p class="indent">For any of your infused items to grant their increased bonus, their gadgets must be reworked and their materials replaced as if they are infusions with a prerequisite of 10th level.</p>
+		</description>
+		<sheet>
+			<description>You have found ways to further enhance the performance of your basic arcanotech gadgets and arcanotech servant.</description>
+		</sheet>
+		<rules>
+			<stat name="companion:ac" value="2" />
+		</rules>
+	</element>
+
+    <element name="Arcanotech Servant" type="Companion" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_COMPANION_ARTIFICER_ARCANOTECH_SERVANT">
+		<supports>Arcanotech Servant</supports>
+		<description>
+			<p>Your tinkering has borne you a a tiny but loyal assistant, the arcanotech servant. It is friendly to you and your companions, and it obeys your commands.</p>
+		</description>
+		<setters>
+			<set name="strength">4</set>
+			<set name="dexterity">14</set>
+			<set name="constitution">10</set>
+			<set name="intelligence">14</set>
+			<set name="wisdom">12</set>
+			<set name="charisma">6</set>
+			<set name="ac">13 (natural armor)</set>
+			<set name="hp">equal the arcanotech servant's Constitution modifier + your Intelligence modifier + five times your level in this class</set>
+			<set name="speed">20 ft., fly 40 ft.</set>
+			<set name="immunities">poison</set>
+			<set name="conditionImmunities">charmed, exhaustion, poisoned</set>			
+			<set name="saves">Dex +4, Con +2</set>
+			<set name="skills">Perception +6, Stealth +4</set>
+			<set name="senses">darkvision 60 ft., passive Perception 14</set>
+			<set name="languages">understands the languages you speak</set>
+			<set name="type">Construct</set>
+			<set name="size">Tiny</set>
+			<set name="alignment">neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_BOTUNAK_HOMEBREW_COMPANION_TRAIT_ARCANOTECH_SERVANT_MIGHT_OF_THE_MASTER,ID_BOTUNAK_HOMEBREW_COMPANION_TRAIT_ARCANOTECH_SERVANT_MASTERS_EYES_AND_EARS</set>
+			<set name="actions">ID_BOTUNAK_HOMEBREW_COMPANION_ACTION_ARCANOTECH_SERVANT_POISONED_NEEDLE,ID_BOTUNAK_HOMEBREW_COMPANION_ACTION_ARCANOTECH_SERVANT_REPAIR</set>
+			<set name="reactions">ID_BOTUNAK_HOMEBREW_COMPANION_REACTION_ARCANOTECH_SERVANT_CHANNEL_MAGIC</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="15" bonus="base" />
+			<stat name="companion:hp:max" value="companion:constitution:modifier" />
+			<stat name="companion:hp:max" value="intelligence:modifier" />
+			<stat name="companion:hp:max" value="level:artificer" />
+			<stat name="companion:hp:max" value="level:artificer" />
+            <stat name="companion:hp:max" value="level:artificer" />
+			<stat name="companion:hp:max" value="level:artificer" />
+			<stat name="companion:hp:max" value="level:artificer" />
+			<stat name="companion:speed" value="20" bonus="base" />
+            <stat name="companion:speed:fly" value="40" bonus="base" />
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="double" />
+			<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="proficiency" />
+            <stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<grant type="Companion Trait" id="ID_BOTUNAK_HOMEBREW_COMPANION_TRAIT_ARCANOTECH_SERVANT_MIGHT_OF_THE_MASTER" />
+            <grant type="Companion Trait" id="ID_BOTUNAK_HOMEBREW_COMPANION_TRAIT_ARCANOTECH_SERVANT_MASTERS_EYES_AND_EARS" />
+		</rules>
+	</element>
+	<element name="Might of the Master" type="Companion Trait" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_COMPANION_TRAIT_ARCANOTECH_SERVANT_MIGHT_OF_THE_MASTER">
+		<description>
+			<p>The following numbers increase by 1 when your proficiency bonus increases by 1: the servant's skill and saving throw bonuses (above), the bonuses to hit and damage of its needle attack, and the number of hit points restored by its Repair action (below).</p>
+		</description>
+		<sheet>
+			<description>The following numbers increase by 1 when your proficiency bonus increases by 1: the servant's skill and saving throw bonuses, the bonuses to hit and damage of its needle attack, and the number of hit points restored by its Repair action.</description>
+		</sheet>
+		<rules>
+			<stat name="might of the master:bonus" value="proficiency" bonus="base" />
+			<stat name="companion:perception:misc" value="might of the master:bonus" />
+            <stat name="companion:stealth:misc" value="might of the master:bonus" />
+			<stat name="companion:dexterity:save:misc" value="might of the master:bonus" />
+			<stat name="companion:constitution:save:misc" value="might of the master:bonus" />
+		</rules>
+	</element>
+	<element name="Master's Eyes and Ears" type="Companion Trait" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_COMPANION_TRAIT_ARCANOTECH_SERVANT_MASTERS_EYES_AND_EARS">
+		<description>
+			<p>The servant has advantage on Wisdom (Perception) checks that rely on hearing or sight. While it is within 100 ft. of you, you can communicate with the servant.</p>
+            <p class="indent">As an action, you can see through the servant's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.</p>
+		</description>
+		<sheet>
+			<description>The servant has advantage on Wisdom (Perception) checks that rely on hearing or sight. You can communicate with the servant while it is within 100 ft. of you.
+            As an action, you can see through the servant's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses</description>
+		</sheet>
+	</element>
+	<element name="Poisoned Needle" type="Companion Action" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_COMPANION_ACTION_ARCANOTECH_SERVANT_POISONED_NEEDLE">
+		<description>
+			<p>Ranged Weapon Attack: +4 to hit, range 30 ft., one target you can see. Hit: 1d4 + 2 poison damage.</p>
+		</description>
+		<sheet>
+			<description>Ranged Weapon Attack: +4 to hit, range 30 ft., one target you can see. Hit: 1d4 + 2 poison damage.</description>
+		</sheet>
+	</element>
+	<element name="Repair" type="Companion Action" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_COMPANION_ACTION_ARCANOTECH_SERVANT_REPAIR">
+		<description>
+			<p>The magical mechanisms inside the servant restore 2d8 + 2 hit points to itself or to one construct or object within 5 feet of it.</p>
+		</description>
+		<sheet usage="3/Day">
+			<description>The magical mechanisms inside the servant restore 2d8 + 2 hit points to itself or to one construct or object within 5 feet of it.</description>
+		</sheet>
+	</element>
+	<element name="Channel Magic" type="Companion Reaction" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_COMPANION_REACTION_ARCANOTECH_SERVANT_CHANNEL_MAGIC">
+		<description>
+			<p>The servant delivers a spell you cast that has a range of touch. The servant must be within 120 feet of you.</p>
+		</description>
+		<sheet>
+			<description>The servant delivers a spell you cast that has a range of touch. The servant must be within 120 feet of you.</description>
+		</sheet>
+	</element>
+
+    <element name="Enhanced Arcane Wand, +3" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_WAND_3">
+		<description>
+			<p>While holding this wand, a creature gains a +3 bonus to spell attack rolls. In addition, the creature ignores half cover when making a spell attack.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Wands</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="1">1 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="artificer infusion; arcanotech">Wand</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="3" />
+		</rules>
+	</element>
+	<element name="Enhanced Arcane Staff, +3" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_ARCANE_STAFF_3">
+		<description>
+			<p>While holding this staff, a creature gains a +3 bonus to spell attack rolls. In addition, the creature ignores half cover when making a spell attack.</p>
+		</description>
+		<setters>
+			<set name="category">Staffs</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="weapon">Quarterstaff</set>
+			<set name="type" addition="artificer infusion; arcanotech">Staff</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="3" />
+		</rules>
+	</element>
+    <element name="Enhanced Arcane Rod, +3" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_INFUSION_ENHANCED_ARCANE_FOCUS_3">
+		<description>
+			<p>While holding this rod, a creature gains a +3 bonus to spell attack rolls. In addition, the creature ignores half cover when making a spell attack.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Rods</set>
+			<set name="weight" lb="2">2 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="type" addition="artificer infusion; arcanotech">Rod</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="3" />
+		</rules>
+	</element>
+    <element name="Enhanced Defense Armor, +1" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_DEFENSE_ARMOR_1">
+		<description>
+			<p>You have a +1 bonus to AC while wearing this armor.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">body</set>
+			<set name="type" addition="light, medium, or heavy">Armor</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">1</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:enhancement" value="1" bonus="enhancement" />
+		</rules>
+	</element>
+	<element name="Enhanced Defense Armor, +2" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_DEFENSE_ARMOR_2">
+		<description>
+			<p>You have a +2 bonus to AC while wearing this armor.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">body</set>
+			<set name="type" addition="light, medium, or heavy">Armor</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">2</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:enhancement" value="2" bonus="enhancement" />
+		</rules>
+	</element>
+	<element name="Enhanced Defense Armor, +3" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_DEFENSE_ARMOR_3">
+		<description>
+			<p>You have a +3 bonus to AC while wearing this armor.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">body</set>
+			<set name="type" addition="light, medium, or heavy; arcanotech">Armor</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">3</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:enhancement" value="3" bonus="enhancement" />
+		</rules>
+	</element>
+    <element name="Enhanced Defense Shield, +1" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_DEFENSE_SHIELD_1">
+		<description>
+			<p>While holding this shield, you have a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="keywords">shield</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">1</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="1" bonus="enhancement" />
+		</rules>
+	</element>
+	<element name="Enhanced Defense Shield, +2" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_DEFENSE_SHIELD_2">
+		<description>
+			<p>While holding this shield, you have a +2 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="keywords">shield</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">2</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="2" bonus="enhancement" />
+		</rules>
+	</element>
+	<element name="Enhanced Defense Shield, +3" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_DEFENSE_SHIELD_3">
+		<description>
+			<p>While holding this shield, you have a +3 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="keywords">shield</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="shield; arcanotech">Armor</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">3</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="3" bonus="enhancement" />
+		</rules>
+	</element>
+    <element name="Enhanced Weapon, +1" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_WEAPON_1">
+		<description>
+			<p>You have a +1 bonus to attack and damage rolls made with this magic weapon.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+            <set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any">Weapon</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+	</element>
+	<element name="Enhanced Weapon, +2" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_WEAPON_2">
+		<description>
+			<p>You have a +2 bonus to attack and damage rolls made with this magic weapon.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+            <set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any">Weapon</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">2</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+	</element>
+	<element name="Enhanced Weapon, +3" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_ENHANCED_WEAPON_3">
+		<description>
+			<p>You have a +3 bonus to attack and damage rolls made with this magic weapon.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+            <set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any; arcanotech">Weapon</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">3</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="name-format">Enhanced {{parent}} +{{enhancement}}</set>
+		</setters>
+	</element>
+    <element name="Repeating Shot +2" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_INFUSION_REPEATING_SHOT_2">
+		<description>
+			<p>This magic weapon grants a +2 bonus to attack and damage rolls made with it when it’s used to make a ranged attack, and it ignores the loading property if it has it.
+			If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you make a ranged attack with it. The ammunition created by the weapon vanishes the instant after it hits or misses a target.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="a simple or martial weapon with the ammunition property; arcanotech">Weapon</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">2</set>
+			<set name="attunement">true</set>
+			<set name="weapon">(ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED),ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION</set>
+			<set name="name-format">Repeating {{parent}} +{{enhancement}}</set>
+		</setters>
+	</element>
+    <element name="Returning Weapon, +2" type="Magic Item" source="BocahTuaNakal's" id="ID_BOTUNAK_HOMEBREW_MAGIC_ITEM_INFUSION_RETURNING_WEAPON_2">
+		<description>
+			<p>This magic weapon grants a +2 bonus to attack and damage rolls made with it, and it returns to the wielder’s hand immediately after it is used to make a ranged attack.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer infusion</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="a simple or martial weapon with the thrown property; arcanotech">Weapon</set>
+			<set name="rarity">Artificer Infusion</set>
+			<set name="enhancement">2</set>
+			<set name="weapon">(ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED),ID_INTERNAL_WEAPON_PROPERTY_THROWN</set>
+			<set name="name-format">Returning {{parent}} +{{enhancement}}</set>
+		</setters>
+	</element>
+</elements>
